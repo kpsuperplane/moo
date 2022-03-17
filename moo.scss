@@ -30,7 +30,7 @@ article aside {
     flex: 0;
     margin: 0;
     padding: 0.1em 0.5em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-bg-secondary);
   }
   > .content {
     flex: 1;
@@ -43,7 +43,7 @@ article aside {
   height: 100vh;
   #editor {
     flex: 0 0 50%;
-    border-right: 1px solid #aaa;
+    border-right: 1px solid var(--color-bg-secondary);
   }
   #output {
     flex: 0 0 50%;
@@ -60,7 +60,7 @@ article aside {
     }
     #parsed {
       flex: 0 0 50%;
-      border-top: 1px solid #aaa;
+      border-top: 1px solid var(--color-bg-secondary);
       overflow: hidden;
       > .content {
         padding: 1rem;
@@ -72,28 +72,28 @@ article aside {
 
 .element {
   font-family: monospace;
-  color: #747a7d;
+  color: var(--color-text-secondary);
   margin-top: 2px;
   cursor: pointer;
   border-radius: 3px;
-  background: rgba(#eee, 0);
+  background: transparent;
   padding-left: 3px;
   margin-left: -3px;
   &:hover,
   &:active {
-    background: rgba(#eee, 1);
+    background: var(--color-accent);
   }
   .tag {
     font-weight: bold;
-    color: #3f91c4;
+    color: var(--color-text);
   }
   .argName {
-    color: #815d9c;
+    color: var(--color-text);
   }
   .argEq {
-    color: #a14343;
+    color: var(--color-text-secondary);
   }
   .argValue {
-    color: #26823e;
+    color: var(--color);
   }
 }

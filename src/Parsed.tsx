@@ -49,7 +49,7 @@ function getElements(parent: any, element: any, depth: number) {
   if (
     element == null ||
     typeof element !== "object" ||
-    element.type.name === "PrettyError"
+    element.props.error != null
   ) {
     return null;
   }

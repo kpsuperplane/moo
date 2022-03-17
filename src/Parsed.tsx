@@ -46,7 +46,11 @@ function Element({ item }) {
 }
 
 function getElements(parent: any, element: any, depth: number) {
-  if (element == null || typeof element !== "object") {
+  if (
+    element == null ||
+    typeof element !== "object" ||
+    element.type.name === "PrettyError"
+  ) {
     return null;
   }
   const { start, end } = element.props.astNode.loc;
@@ -73,9 +77,6 @@ function List({ items }) {
 
 export default function Parsed() {
   const { rendered } = useAppContext();
-  if (rendered != null && (rendered as any).type.name === "PrettyError") {
-    return null;
-  }
   const items = useMemo(() => getElements(null, rendered, 0), [rendered]);
   return (
     <div id="parsed" className="section">

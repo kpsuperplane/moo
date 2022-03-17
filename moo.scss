@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+pre {
+  margin-top: 0;
+  padding: 0;
+  white-space: pre-wrap;
+}
+article aside {
+  padding-top: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  > .heading {
+    flex: 0;
+    margin: 0;
+    padding: 0.1em 0.5em;
+    border-bottom: 1px solid #ccc;
+  }
+  > .content {
+    flex: 1;
+    overflow: hidden;
+  }
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  #editor {
+    flex: 0 0 50%;
+    border-right: 1px solid #aaa;
+  }
+  #output {
+    flex: 0 0 50%;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    #rendered {
+      flex: 0 0 50%;
+      overflow: hidden;
+      > .content {
+        padding: 1rem;
+        overflow: auto;
+      }
+    }
+    #parsed {
+      flex: 0 0 50%;
+      border-top: 1px solid #aaa;
+      overflow: hidden;
+      > .content {
+        padding: 1rem;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.element {
+  font-family: monospace;
+  color: #747a7d;
+  margin-top: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: rgba(#eee, 0);
+  padding-left: 3px;
+  margin-left: -3px;
+  &:hover,
+  &:active {
+    background: rgba(#eee, 1);
+  }
+  .tag {
+    font-weight: bold;
+    color: #3f91c4;
+  }
+  .argName {
+    color: #815d9c;
+  }
+  .argEq {
+    color: #a14343;
+  }
+  .argValue {
+    color: #26823e;
+  }
+}

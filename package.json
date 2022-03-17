@@ -21,7 +21,6 @@
     "buffer": "^6.0.3",
     "Buffer": "^0.0.0",
     "monaco-editor": "^0.33.0",
-    "process": "^0.11.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "use-debounce": "^7.0.1"
